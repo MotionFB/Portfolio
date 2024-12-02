@@ -57,12 +57,11 @@ header .logo {
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
 /* Ingrandire i video e spostare gli altri quando selezionato */
 .gallery-item.clicked .gallery-iframe {
-  transform: scale(2); /* Ingrandisce il video a 700px */
+  height: 700px; /* Ingrandisce il video a 700px */
   z-index: 10;
 }
 
@@ -72,7 +71,8 @@ header .logo {
 
 /* Quando si passa sopra i video */
 .gallery-item:hover .gallery-iframe {
-  transform: scale(1.2); /* Ingrandisce il video al passaggio del mouse */
+  transform: scale(1.1); /* Ingrandisce il video al passaggio del mouse */
+  z-index: 2;
 }
 
 /* Footer con pulsante e email */
