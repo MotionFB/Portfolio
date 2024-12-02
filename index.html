@@ -61,5 +61,22 @@
     </a>
   </div>
 
+  <!-- Aggiungiamo il JavaScript per l'interazione con la galleria -->
+  <script>
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('clicked');
+        // Chiudi gli altri video
+        galleryItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('clicked');
+          }
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>
