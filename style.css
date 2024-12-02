@@ -24,13 +24,14 @@ header .logo {
   height: auto;
 }
 
-/* Showreel - iframe molto più grande */
+/* Showreel - iframe ingrandito */
 .showreel iframe {
-  width: 90%;
+  width: 100%;
   height: 700px;  /* Altezza aumentata a 700px */
   border: none;
   border-radius: 5px;
   margin: 2rem 0;
+  object-fit: cover;  /* Mantenere il video proporzionato senza deformarsi */
 }
 
 /* Gallery */
@@ -52,16 +53,18 @@ header .logo {
 
 .gallery-iframe {
   width: 100%;
-  height: 350px;  /* Altezza video galleria aumentata a 350px */
+  height: 350px;  /* Altezza video galleria iniziale di 350px */
   border: none;
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  transition: transform 0.3s ease;
+  object-fit: cover; /* Mantenere il video proporzionato senza deformarsi */
 }
 
 /* Ingrandire i video e spostare gli altri quando selezionato */
 .gallery-item.clicked .gallery-iframe {
-  height: 700px; /* Ingrandisce il video a 700px */
+  transform: scale(2); /* Ingrandisce il video selezionato a 700px */
   z-index: 10;
 }
 
@@ -71,8 +74,7 @@ header .logo {
 
 /* Quando si passa sopra i video */
 .gallery-item:hover .gallery-iframe {
-  transform: scale(1.1); /* Ingrandisce il video al passaggio del mouse */
-  z-index: 2;
+  transform: scale(1.2); /* Ingrandisce il video al passaggio del mouse */
 }
 
 /* Footer con pulsante e email */
@@ -102,7 +104,7 @@ header .logo {
   }
 
   .showreel iframe {
-    height: 450px;
+    height: 500px;  /* Altezza dello showreel più piccola per mobile */
   }
 
   .gallery {
@@ -110,6 +112,6 @@ header .logo {
   }
 
   .gallery-item .gallery-iframe {
-    height: 200px;
+    height: 250px;  /* Altezza video galleria per mobile */
   }
 }
