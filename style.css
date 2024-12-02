@@ -1,4 +1,7 @@
-/* Stile base per il sito */
+/* Importazione dei font */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Bebas+Neue&display=swap');
+
+/* Reset di base */
 * {
     margin: 0;
     padding: 0;
@@ -6,19 +9,19 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Barlow", sans-serif;
     background-color: #f0f0f0;
     color: #333;
+    text-align: center; /* Allinea tutto al centro */
+    padding-top: 70px; /* Margine superiore */
 }
 
 header {
-    text-align: center;
-    margin: 70px 0;
+    margin-bottom: 30px;
 }
 
 h1 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
 }
 
 p {
@@ -27,21 +30,20 @@ p {
 
 section {
     margin: 40px 0;
-    text-align: center;
 }
 
 .showreel iframe {
     width: 100%;
     max-width: 640px;
     height: calc(640px * 9 / 16); /* Formato 16:9 */
-    margin-bottom: 40px;
+    margin: 20px auto; /* Allineamento centrato */
 }
 
 .video-gallery .gallery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* 4 colonne */
     gap: 20px;
-    justify-items: center;
+    justify-content: center;
 }
 
 .video-item iframe {
@@ -51,6 +53,18 @@ section {
 }
 
 footer {
-    text-align: center;
     margin-top: 40px;
+    font-size: 1rem;
 }
+
+/* Classi per i font */
+.barlow-thin { font-family: "Barlow", sans-serif; font-weight: 100; font-style: normal; }
+.barlow-extralight { font-family: "Barlow", sans-serif; font-weight: 200; font-style: normal; }
+.barlow-light { font-family: "Barlow", sans-serif; font-weight: 300; font-style: normal; }
+.barlow-regular { font-family: "Barlow", sans-serif; font-weight: 400; font-style: normal; }
+.barlow-medium { font-family: "Barlow", sans-serif; font-weight: 500; font-style: normal; }
+.barlow-semibold { font-family: "Barlow", sans-serif; font-weight: 600; font-style: normal; }
+.barlow-bold { font-family: "Barlow", sans-serif; font-weight: 700; font-style: normal; }
+.barlow-extrabold { font-family: "Barlow", sans-serif; font-weight: 800; font-style: normal; }
+.barlow-black { font-family: "Barlow", sans-serif; font-weight: 900; font-style: normal; }
+.bebas-neue-regular { font-family: "Bebas Neue", sans-serif; font-weight: 400; font-style: normal; }
