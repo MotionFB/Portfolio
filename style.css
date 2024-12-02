@@ -24,14 +24,13 @@ header .logo {
   height: auto;
 }
 
-/* Showreel - iframe ingrandito */
+/* Showreel - iframe con dimensioni corrette (1244x700px) */
 .showreel iframe {
-  width: 100%;
-  height: 700px;  /* Altezza aumentata a 700px */
+  width: 1244px; /* Imposta la larghezza esatta */
+  height: 700px;  /* Imposta l'altezza esatta */
   border: none;
   border-radius: 5px;
   margin: 2rem 0;
-  object-fit: cover;  /* Mantenere il video proporzionato senza deformarsi */
 }
 
 /* Gallery */
@@ -42,7 +41,6 @@ header .logo {
   justify-items: center;
   padding: 2rem;
   width: 90%;
-  transition: all 0.5s ease;
 }
 
 .gallery-item {
@@ -53,19 +51,19 @@ header .logo {
 
 .gallery-iframe {
   width: 100%;
-  height: 350px;  /* Altezza video galleria iniziale di 350px */
+  height: auto;
+  max-height: 350px;  /* Manteniamo la proporzione 16:9 */
   border: none;
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-  transition: transform 0.3s ease;
-  object-fit: cover; /* Mantenere il video proporzionato senza deformarsi */
 }
 
-/* Ingrandire i video e spostare gli altri quando selezionato */
+/* Ingrandire i video quando selezionato */
 .gallery-item.clicked .gallery-iframe {
-  transform: scale(2); /* Ingrandisce il video selezionato a 700px */
+  max-height: 700px; /* Ingrandisce il video a 700px mantenendo la proporzione 16:9 */
   z-index: 10;
+  width: 100%;
 }
 
 .gallery-item.clicked {
@@ -74,7 +72,8 @@ header .logo {
 
 /* Quando si passa sopra i video */
 .gallery-item:hover .gallery-iframe {
-  transform: scale(1.2); /* Ingrandisce il video al passaggio del mouse */
+  transform: scale(1.1); /* Ingrandisce il video al passaggio del mouse */
+  z-index: 2;
 }
 
 /* Footer con pulsante e email */
@@ -104,7 +103,7 @@ header .logo {
   }
 
   .showreel iframe {
-    height: 500px;  /* Altezza dello showreel più piccola per mobile */
+    height: 450px;
   }
 
   .gallery {
@@ -112,6 +111,6 @@ header .logo {
   }
 
   .gallery-item .gallery-iframe {
-    height: 250px;  /* Altezza video galleria per mobile */
+    height: 200px;
   }
 }
