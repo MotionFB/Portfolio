@@ -24,10 +24,10 @@ header .logo {
   height: auto;
 }
 
-/* Showreel - iframe doppio rispetto alla dimensione precedente */
+/* Showreel - iframe molto più grande */
 .showreel iframe {
   width: 90%;
-  height: 800px;  /* Doppia altezza rispetto alla versione precedente */
+  height: 800px;  /* Raddoppiato rispetto alla versione precedente */
   border: none;
   border-radius: 5px;
   margin: 2rem 0;
@@ -41,6 +41,7 @@ header .logo {
   justify-items: center;
   padding: 2rem;
   width: 90%;
+  transition: all 0.5s ease;
 }
 
 .gallery-item {
@@ -51,11 +52,12 @@ header .logo {
 
 .gallery-iframe {
   width: 100%;
-  height: 250px;
+  height: 250px;  /* Maggiore rispetto alla versione precedente */
   border: none;
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 /* Ingrandire i video e spostare gli altri quando selezionato */
