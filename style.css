@@ -1,26 +1,27 @@
 /* Impostiamo i font globali */
 body {
-  font-family: 'Barlow', sans-serif; /* Applica Barlow come font di default */
+  font-family: 'Barlow', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Allinea tutto al centro orizzontalmente */
-  justify-content: center; /* Centra verticalmente */
-  height: 100vh; /* Imposta l'altezza a tutta la finestra */
-  text-align: center; /* Allinea i testi al centro */
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  text-align: center;
 }
 
 /* Header e titoli con Bebas Neue */
 header {
+  margin-top: 200px; /* Margine superiore flessibile */
   padding: 2rem;
 }
 
 header h1 {
-  font-family: 'Bebas Neue', sans-serif; /* Usa Bebas Neue per il titolo */
-  font-size: 3rem; /* Modifica la dimensione del titolo */
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
   font-weight: normal;
   letter-spacing: 1px;
 }
@@ -31,64 +32,60 @@ header p {
   color: #555;
 }
 
-/* Nuova classe per Bebas Neue */
-.bebas-neue-regular {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* Classi per Barlow con vari pesi e stili */
-.barlow-regular {
-  font-family: "Barlow", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+/* Showreel */
+.showreel iframe {
+  width: 80%;
+  height: 450px;
+  border: none;
+  margin: 2rem 0;
+  border-radius: 5px;
 }
 
 /* Gallery */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  justify-items: center; /* Allinea al centro gli item della gallery */
+  justify-items: center;
   padding: 2rem;
-  width: 90%; /* Imposta la larghezza della gallery */
+  width: 90%;
 }
 
 .gallery-item iframe {
   width: 100%;
-  height: 200px; /* Modifica l'altezza dell'iframe */
+  height: 200px;
   border: none;
   border-radius: 5px;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #2c3e50;
-  color: white;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
+/* Footer con pulsante e email */
+.footer {
+  padding: 2rem;
 }
 
-/* Testi e link */
-a {
+.email-button {
   font-family: 'Barlow', sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-decoration: none;
-  color: #333;
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-a:hover {
-  color: #2c3e50;
+.email-button:hover {
+  background-color: #34495e;
 }
 
-/* Responsività per i dispositivi più piccoli */
+/* Responsività per dispositivi più piccoli */
 @media (max-width: 768px) {
   header h1 {
     font-size: 2.5rem;
+  }
+
+  .showreel iframe {
+    height: 350px;
   }
 
   .gallery {
