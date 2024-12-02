@@ -13,7 +13,7 @@ body {
 
 header {
     text-align: center;
-    margin: 40px 0;
+    margin: 70px 0;
 }
 
 h1 {
@@ -33,7 +33,7 @@ section {
 .showreel iframe {
     width: 100%;
     max-width: 640px;
-    height: 360px;
+    height: calc(640px * 9 / 16); /* Formato 16:9 */
     margin-bottom: 40px;
 }
 
@@ -47,7 +47,7 @@ section {
 .video-item iframe {
     width: 100%;
     max-width: 320px;
-    height: 180px;
+    height: calc(320px * 9 / 16); /* Formato 16:9 */
 }
 
 footer {
