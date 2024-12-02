@@ -1,120 +1,89 @@
-/* Impostiamo i font globali */
+/* Font globale */
 body {
   font-family: 'Barlow', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  height: 100%;
-  text-align: center;
 }
 
-/* Logo */
-.logo {
-  width: 150px;
-  height: auto;
-  margin-bottom: 30px;
-}
-
-/* Header e titoli con Bebas Neue */
+/* Header */
 header {
-  margin-top: 70px; /* Margine superiore ridotto */
-  padding: 2rem;
+  margin-top: 70px;
 }
 
-header h1 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 3rem;
-  font-weight: normal;
-  letter-spacing: 1px;
+header .logo {
+  width: 200px;
+  height: auto;
 }
 
 header p {
   font-family: 'Barlow', sans-serif;
   font-size: 1.2rem;
-  color: #555;
+  margin-top: 10px;
 }
 
 /* Showreel */
 .showreel iframe {
-  width: 100%;
+  width: 90%;
+  max-width: 1244px;
   height: 700px;
   border: none;
-  margin: 2rem 0;
-  border-radius: 5px;
+  margin: 20px 0;
 }
 
 /* Gallery */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
-  justify-items: center;
-  padding: 2rem;
   width: 90%;
+  margin-top: 20px;
 }
 
 .gallery-item iframe {
   width: 100%;
-  height: 300px;
+  aspect-ratio: 16/9;
   border: none;
-  border-radius: 5px;
-  transition: transform 0.3s ease, scale 0.3s ease;
+  transition: transform 0.3s ease-in-out, z-index 0.3s;
 }
 
 .gallery-item:hover iframe {
+  transform: scale(1.05);
+}
+
+.gallery-item:focus-within iframe {
+  transform: scale(1.5);
+  z-index: 10;
+  position: relative;
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+}
+
+.contact-icon {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-icon:hover {
   transform: scale(1.1);
 }
 
-/* Video ingrandito */
-.gallery-item iframe:focus {
-  transform: scale(1.5);
-  position: fixed;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%) scale(1.5);
-  z-index: 999;
-}
-
-/* Footer con pulsante e email */
-.footer {
-  padding: 2rem;
-}
-
-.email-button {
-  font-family: 'Barlow', sans-serif;
-  font-size: 1.2rem;
-  text-decoration: none;
-  background-color: #2c3e50;
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.email-button:hover {
-  background-color: #34495e;
-}
-
-/* Responsività per dispositivi più piccoli */
+/* Responsività */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 2.5rem;
-  }
-
   .showreel iframe {
-    height: 500px;
-  }
-
-  .gallery {
-    grid-template-columns: 1fr 1fr;
+    height: 400px;
   }
 
   .gallery-item iframe {
-    height: 200px;
+    height: auto;
   }
 }
