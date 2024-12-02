@@ -27,7 +27,7 @@ header .logo {
 /* Showreel - iframe molto più grande */
 .showreel iframe {
   width: 90%;
-  height: 800px;  /* Raddoppiato rispetto alla versione precedente */
+  height: 700px;  /* Altezza aumentata a 700px */
   border: none;
   border-radius: 5px;
   margin: 2rem 0;
@@ -52,7 +52,7 @@ header .logo {
 
 .gallery-iframe {
   width: 100%;
-  height: 250px;  /* Maggiore rispetto alla versione precedente */
+  height: 350px;  /* Altezza video galleria aumentata a 350px */
   border: none;
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
@@ -62,7 +62,7 @@ header .logo {
 
 /* Ingrandire i video e spostare gli altri quando selezionato */
 .gallery-item.clicked .gallery-iframe {
-  transform: scale(2); /* Ingrandisce il video */
+  transform: scale(2); /* Ingrandisce il video a 700px */
   z-index: 10;
 }
 
