@@ -1,89 +1,81 @@
-/* Font globale */
+/* Base styles */
 body {
   font-family: 'Barlow', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background: #f4f4f4;
   color: #333;
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 /* Header */
 header {
   margin-top: 70px;
 }
-
-header .logo {
-  width: 200px;
-  height: auto;
+.logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
-
-header p {
-  font-family: 'Barlow', sans-serif;
+.intro {
   font-size: 1.2rem;
-  margin-top: 10px;
+  color: #555;
 }
 
 /* Showreel */
 .showreel iframe {
-  width: 90%;
+  width: 80%;
   max-width: 1244px;
   height: 700px;
   border: none;
-  margin: 20px 0;
+  border-radius: 10px;
+  margin: 20px auto;
 }
 
 /* Gallery */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
+  gap: 10px;
   width: 90%;
-  margin-top: 20px;
+  margin: 20px 0;
 }
-
 .gallery-item iframe {
   width: 100%;
-  aspect-ratio: 16/9;
-  border: none;
-  transition: transform 0.3s ease-in-out, z-index 0.3s;
+  height: 200px;
+  transition: transform 0.3s ease;
 }
-
 .gallery-item:hover iframe {
   transform: scale(1.05);
 }
-
-.gallery-item:focus-within iframe {
-  transform: scale(1.5);
+.gallery-item:active iframe {
+  transform: scale(1.8);
   z-index: 10;
-  position: relative;
 }
 
 /* Footer */
 footer {
-  margin-top: 20px;
+  padding: 20px;
+}
+.email-button {
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.email-button:hover {
+  background: #555;
 }
 
-.contact-icon {
-  width: 100px;
-  height: 100px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.contact-icon:hover {
-  transform: scale(1.1);
-}
-
-/* Responsività */
+/* Responsiveness */
 @media (max-width: 768px) {
   .showreel iframe {
     height: 400px;
   }
+  .
 
-  .gallery-item iframe {
-    height: auto;
-  }
-}
