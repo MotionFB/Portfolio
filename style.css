@@ -1,27 +1,21 @@
-/* Impostiamo i font globali */
+/* Impostazioni base */
 body {
   font-family: 'Barlow', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  height: 100%;
   text-align: center;
-  overflow-x: hidden;
 }
 
-/* Header e titoli con Bebas Neue */
+/* Header */
 header {
-  margin-top: 70px; /* Margine superiore aggiornato */
+  margin-top: 50px;
   padding: 2rem;
 }
 
-header .logo {
-  max-width: 200px; /* Limita la larghezza del logo */
+header .logo img {
+  max-width: 150px;
   margin-bottom: 20px;
 }
 
@@ -32,20 +26,14 @@ header h1 {
   letter-spacing: 1px;
 }
 
-header p {
-  font-family: 'Barlow', sans-serif;
-  font-size: 1.2rem;
-  color: #555;
-}
-
 /* Showreel */
 .showreel iframe {
   width: 100%;
-  height: 700px; /* Altezza del showreel */
+  height: 700px;
   border: none;
+  max-width: 1244px;
   margin: 2rem 0;
   border-radius: 5px;
-  max-width: 1244px; /* Limita la larghezza */
 }
 
 /* Gallery */
@@ -55,31 +43,30 @@ header p {
   gap: 1rem;
   justify-items: center;
   padding: 2rem;
-  width: 90%;
 }
 
 .gallery-item iframe {
   width: 100%;
-  height: 350px; /* Altezza iniziale dei video */
+  height: 350px;
   border: none;
   border-radius: 5px;
   transition: transform 0.3s ease;
 }
 
 .gallery-item:hover iframe {
-  transform: scale(1.1); /* Ingrandisce leggermente il video */
+  transform: scale(1.1);
 }
 
 .gallery-item:active iframe {
-  transform: scale(1.5); /* Ingrandisce il video quando cliccato */
+  transform: scale(1.5);
 }
 
-/* Footer con pulsante e email */
+/* Footer */
 footer {
   padding: 2rem;
 }
 
-.email-button {
+.contact-button {
   font-family: 'Barlow', sans-serif;
   font-size: 1.2rem;
   text-decoration: none;
@@ -90,11 +77,11 @@ footer {
   transition: background-color 0.3s ease;
 }
 
-.email-button:hover {
+.contact-button:hover {
   background-color: #34495e;
 }
 
-/* Responsività per dispositivi più piccoli */
+/* Responsività */
 @media (max-width: 768px) {
   header h1 {
     font-size: 2.5rem;
@@ -112,4 +99,3 @@ footer {
     height: 250px;
   }
 }
-
